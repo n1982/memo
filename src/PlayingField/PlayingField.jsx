@@ -4,8 +4,9 @@ import './PlayingField.css'
 
 function PlayingField(props) {
     return (
-        <div className='playing-field__container'>
+        <div className = 'playing-field__container'>
             <div className = 'playing-field'>
+                <Card flip = {true} />
                 <Card />
                 <Card />
                 <Card />
@@ -13,8 +14,7 @@ function PlayingField(props) {
                 <Card />
                 <Card />
                 <Card />
-                <Card />
-                <Card />
+                <Card flip = {true} />
                 <Card />
                 <Card />
                 <Card />

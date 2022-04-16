@@ -1,9 +1,16 @@
 import React from 'react';
+import classNames from "classnames";
 import './Card.css'
 
-function Card(props) {
+let Card = ({flip = false}) => {
+    let cardClassName = classNames('card', {flip})
     return (
-        <div className='card'></div>
+        <div className = 'card__container'>
+            <div className = {cardClassName}>
+                <div className = 'card__front' />
+                <div className = 'card__back' />
+            </div>
+        </div>
     );
 }
 
