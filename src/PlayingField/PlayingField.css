@@ -1,0 +1,12 @@
+.playing-field__container{
+    display: flex;
+    justify-content: center;
+    width: 400px;
+    margin: 0 auto;
+    border: 2px solid red;
+}
+.playing-field{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
