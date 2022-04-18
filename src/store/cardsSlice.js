@@ -132,10 +132,13 @@ export const cardsSlice = createSlice({
             state.cardSecond = null;
             state.pairCards -=1
         },
+        shuffleCards:(state) => {
+            state.cards.sort(() => Math.random() - 0.5);
+        },
     }
 });
 
-export const {flipCard, unFlipCard, disableCards} = cardsSlice.actions
+export const {flipCard, unFlipCard, disableCards, shuffleCards} = cardsSlice.actions
 
 
 export const unfliptAsync = (firstCard, secondCard) => (dispatch) => {

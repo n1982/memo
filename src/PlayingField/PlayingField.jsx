@@ -1,6 +1,6 @@
 import React, {useEffect}from 'react';
 import {useDispatch, useSelector} from "react-redux";
-import {disableCards, unfliptAsync} from "../store/cardsSlice";
+import {disableCards, unfliptAsync, shuffleCards} from "../store/cardsSlice";
 
 import Card from "../Card";
 import './PlayingField.css'
@@ -17,11 +17,14 @@ const PlayingField = () => {
        if (!!firstCard && !!secondCard && firstCard?.color !== secondCard?.color){
             console.log('flip card')
                dispatch(unfliptAsync(firstCard, secondCard))
-        }
-       else if(!!firstCard && !!secondCard && firstCard?.color === secondCard?.color) {
+        } else if(!!firstCard && !!secondCard && firstCard?.color === secondCard?.color) {
             dispatch(disableCards({firstCard, secondCard}))
         }
-    },[firstCard, secondCard])
+    },[firstCard, secondCard]);
+
+    useEffect(()=>{
+        dispatch(shuffleCards())
+    },[])
 
     return (
         <>
