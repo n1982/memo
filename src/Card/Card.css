@@ -1,4 +1,4 @@
-.card__container{
+.card__container {
     width: 80px;
     height: 80px;
     margin: 5px;
@@ -7,8 +7,6 @@
     box-shadow: gray;
 }
 
-
-
 .card {
     width: inherit;
     height: inherit;
@@ -16,13 +14,15 @@
     transform-style: preserve-3d;
     position: relative;
 }
-.card__container .card:active {
-    transform: scale(0.97);
-    transition: transform .2s;
+
+.card__container.flip {
+    cursor: unset;
 }
-.flip{
+
+.card.flip {
     transform: rotateY(180deg);
 }
+
 .card__front, .card__back {
     position: absolute;
     width: inherit;
@@ -32,11 +32,29 @@
     border-radius: 5px;
     backface-visibility: hidden;
 }
+
 .card__front {
     z-index: 2;
     background-color: gray;
 }
+
 .card__back {
-    background-color: green;
     transform: rotateY(180deg);
 }
+
+.red {
+    background-color: red;
+}
+
+.green {
+    background-color: green;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.yellow {
+    background-color: yellow;
+}
+

@@ -1,7 +1,7 @@
 import React from 'react';
 import './Header.css'
 
-function Header(props) {
+function Header() {
     return (
         <div className='header'>
             <h1 className='header__title'>Игра «Найди пару»</h1>
