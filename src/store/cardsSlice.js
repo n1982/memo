@@ -124,9 +124,7 @@ export const cardsSlice = createSlice({
             state.cardSecond = null;
         },
 
-        disableCards: (state, action) => {
-            const firstIndex = action.payload.firstCard.index
-            const secondIndex = action.payload.secondCard.index
+        disableCards: (state) => {
             state.cardFirst = null;
             state.cardSecond = null;
         },
@@ -137,7 +135,6 @@ export const {flipCard, unFlipCard, disableCards} = cardsSlice.actions
 
 
 export const unfliptAsync = (firstCard, secondCard) => (dispatch) => {
-    console.log(firstCard, secondCard)
     setTimeout(() => {
         dispatch(unFlipCard({firstCard, secondCard}))
     }, 1500)

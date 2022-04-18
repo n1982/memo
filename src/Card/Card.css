@@ -6,9 +6,6 @@
     cursor: pointer;
     box-shadow: gray;
 }
-.fliped{
-
-}
 
 .card {
     width: inherit;
@@ -18,12 +15,11 @@
     position: relative;
 }
 
-/*.card__container .card:active {*/
-/*    transform: scale(0.97);*/
-/*    transition: transform .2s;*/
-/*}*/
+.card__container.flip {
+    cursor: unset;
+}
 
-.flip {
+.card.flip {
     transform: rotateY(180deg);
 }
 
