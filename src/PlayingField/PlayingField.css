@@ -1,16 +1,17 @@
-.playing-field__container{
+.playing-field__container {
     display: flex;
     justify-content: center;
     width: 400px;
     margin: 50px auto;
 }
-.information{
+
+.information {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.playing-field{
+.playing-field {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;

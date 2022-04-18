@@ -104,8 +104,8 @@ export const cardsSlice = createSlice({
         ],
         cardFirst: null,
         cardSecond: null,
-        gameRound:1,
-        pairCards:8
+        gameRound: 1,
+        pairCards: 8
     },
     reducers: {
         flipCard: (state, action) => {
@@ -115,7 +115,7 @@ export const cardsSlice = createSlice({
             } else if (state.cardSecond === null) {
                 state.cardSecond = {...action.payload}
                 state.cards[action.payload.index].flip = true
-                state.gameRound +=1
+                state.gameRound += 1
             }
         },
         unFlipCard: (state, action) => {
@@ -130,16 +130,15 @@ export const cardsSlice = createSlice({
         disableCards: (state) => {
             state.cardFirst = null;
             state.cardSecond = null;
-            state.pairCards -=1
+            state.pairCards -= 1
         },
-        shuffleCards:(state) => {
+        shuffleCards: (state) => {
             state.cards.sort(() => Math.random() - 0.5);
         },
     }
 });
 
 export const {flipCard, unFlipCard, disableCards, shuffleCards} = cardsSlice.actions
-
 
 export const unfliptAsync = (firstCard, secondCard) => (dispatch) => {
     setTimeout(() => {
