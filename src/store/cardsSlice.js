@@ -144,7 +144,7 @@ export const {flipCard, unFlipCard, disableCards, shuffleCards} = cardsSlice.act
 export const unfliptAsync = (firstCard, secondCard) => (dispatch) => {
     setTimeout(() => {
         dispatch(unFlipCard({firstCard, secondCard}))
-    }, 1500)
+    }, 1000)
 }
 
 export default cardsSlice.reducer
