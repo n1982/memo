@@ -2,9 +2,14 @@
     display: flex;
     justify-content: center;
     width: 400px;
-    margin: 0 auto;
-    border: 2px solid red;
+    margin: 50px auto;
 }
+.information{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .playing-field{
     display: flex;
     justify-content: space-around;

@@ -104,6 +104,8 @@ export const cardsSlice = createSlice({
         ],
         cardFirst: null,
         cardSecond: null,
+        gameRound:1,
+        pairCards:8
     },
     reducers: {
         flipCard: (state, action) => {
@@ -113,6 +115,7 @@ export const cardsSlice = createSlice({
             } else if (state.cardSecond === null) {
                 state.cardSecond = {...action.payload}
                 state.cards[action.payload.index].flip = true
+                state.gameRound +=1
             }
         },
         unFlipCard: (state, action) => {
@@ -127,6 +130,7 @@ export const cardsSlice = createSlice({
         disableCards: (state) => {
             state.cardFirst = null;
             state.cardSecond = null;
+            state.pairCards -=1
         },
     }
 });
